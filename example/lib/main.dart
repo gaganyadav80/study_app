@@ -24,10 +24,20 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Study App')),
-      body: Center(
-        child: ElevatedButton(
-          child: const Text('Show Bottom Sheet'),
-          onPressed: () => showTopicBottomSheet(context),
+      body: SizedBox(
+        width: double.infinity,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ElevatedButton(
+              child: const Text('Show Bottom Sheet'),
+              onPressed: () => showTopicBottomSheet(context),
+            ),
+            ElevatedButton(
+              child: const Text('Show Info Bottom Sheet'),
+              onPressed: () => showInfoBottomSheet(context),
+            ),
+          ],
         ),
       ),
     );
